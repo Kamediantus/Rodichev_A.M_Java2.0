@@ -1,12 +1,15 @@
 import java.util.Scanner;
 
 public class Calc {
+
+
+
     /**
      * @author Sasha Rodichev, lab
      * I know about JavaDoc comments. But this programm is very short. I will use it fully in next tasks.
      * Thanks for understanding
      * */
-    public static void main(String[] args) {
+    public static void calculate(){
         double num1;
         double num2;
         String sign;
