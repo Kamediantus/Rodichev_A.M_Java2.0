@@ -1,3 +1,5 @@
+package course.task_2_3.operations;
+
 import java.util.Scanner;
 
 public class ArrayLength {
