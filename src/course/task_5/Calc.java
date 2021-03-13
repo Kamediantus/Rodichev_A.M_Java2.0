@@ -8,6 +8,7 @@ public class Calc {
     public static void main(String[] args) {
         double num1;
         double num2;
+        double result;
         String sign;
         Scanner in = new Scanner(System.in);
         Operation operation = new Devide();
@@ -34,16 +35,14 @@ public class Calc {
                 operation = new Subtract();
                 break;
             case "/":
-                try {
                     operation = new Devide();
                     break;
-                }catch (ArithmeticException e){
-                    e.getMessage();}
             case "*":
                 operation = new Multiply();
                 break;
         }
-            System.out.printf("%.4f %s %.4f = %.4f", num1, sign, num2, operation.operate(num1, num2));
+        result = operation.operate(num1 , num2);
+        System.out.printf("%.4f %s %.4f = %.4f", num1, sign, num2, result);
     }
 }
 
