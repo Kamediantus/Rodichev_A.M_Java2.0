@@ -4,7 +4,7 @@ import course.task_5.operations.*;
 
 import java.util.Scanner;
 
-public class Presentation {
+public class Calc {
     public static void main(String[] args) {
         double num1;
         double num2;
@@ -13,7 +13,7 @@ public class Presentation {
         Operation operation = new Devide();
 
         System.out.print("Hi!\nToday we will add, subtract, multiply and divide two numbers!\n" +
-                "At first select sign: +, -, *, / : ");
+                "At first select operation: +, -, *, / : ");
         sign = in.next();
 
         switch (sign){
@@ -34,13 +34,11 @@ public class Presentation {
                 operation = new Subtract();
                 break;
             case "/":
-                if (num2 == 0) {
-                    System.out.println("Ohh, i just said!");
-                    System.exit(0);
+                try {
+                    operation = new Devide();
                     break;
-                                    }
-                operation = new Devide();
-                break;
+                }catch (ArithmeticException e){
+                    e.getMessage();}
             case "*":
                 operation = new Multiply();
                 break;
